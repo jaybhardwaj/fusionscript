@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Example test run" parallel= "tests" thread-count="2">
+  <listeners>
+  	<listener class-name="Framework.TestingFramework.annotationHandler.AnnotationTest"/>
+  </listeners>
+  <test name="Simple Test">
+    <classes>
+      <class name="Framework.TestingFramework.test.FeedbackTest"/>
+    </classes>
+  </test>
+ <test name="Simple Test1">
+    <classes>
+      <class name="Framework.TestingFramework.test.RaiseExpenseTest"/>
+    </classes>
+  </test>
+<!--   <test name="Simple Test3">
+	<classes>
+		<class name="Framework.TestingFramework.test.GoogleHomePageTest3"/>
+	</classes>
+  </test> -->
+</suite>

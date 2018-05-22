@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="4" ignored="0" total="6" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Example test run" duration-ms="138633" started-at="2018-05-18T11:15:32Z" finished-at="2018-05-18T11:17:51Z">
+    <groups>
+    </groups>
+    <test name="Simple Test1" duration-ms="91822" started-at="2018-05-18T11:15:32Z" finished-at="2018-05-18T11:17:04Z">
+      <class name="Framework.TestingFramework.test.RaiseExpenseTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="beforeSuite" is-config="true" duration-ms="6" started-at="2018-05-18T16:45:32Z" finished-at="2018-05-18T16:45:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="setUp" is-config="true" duration-ms="2027" started-at="2018-05-18T16:45:32Z" finished-at="2018-05-18T16:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="testSetUp" is-config="true" duration-ms="61" started-at="2018-05-18T16:45:34Z" finished-at="2018-05-18T16:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="FAIL" signature="RaiseExpense(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="RaiseExpense" duration-ms="51581" started-at="2018-05-18T16:45:40Z" description="TC_RE_01" data-provider="ExpenseData" finished-at="2018-05-18T16:46:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[benzir@zz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hotel]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[submit]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (2b3b03fc85d084dba07c8ec80617161d)] -> xpath: //button[@aria-label='Eat cake']] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (2b3b03fc85d084dba07c8ec80617161d)] -> xpath: //button[@aria-label='Eat cake']] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at Framework.TestingFramework.utils.WaitUtil.explicitWaitByVisibilityOfElement(WaitUtil.java:21)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.raiseHotelExp(RaiseExpenseHome.java:240)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.CheckRaiseExpense(RaiseExpenseHome.java:167)
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RaiseExpense -->
+        <test-method status="FAIL" signature="RaiseExpense(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="RaiseExpense" duration-ms="27052" started-at="2018-05-18T16:46:32Z" description="TC_RE_01" data-provider="ExpenseData" finished-at="2018-05-18T16:46:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dinesh@zz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hotel]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[save]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate an element using By.all({By.xpath: //md-option[@ng-repeat='trip in tripAssignmentList'][1],By.xpath: //md-option[@ng-repeat='trip in tripAssignmentList' and @selected='selected']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.all({By.xpath: //md-option[@ng-repeat='trip in tripAssignmentList'][1],By.xpath: //md-option[@ng-repeat='trip in tripAssignmentList' and @selected='selected']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:54)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy11.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.raiseHotelExp(RaiseExpenseHome.java:248)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.CheckRaiseExpense(RaiseExpenseHome.java:167)
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RaiseExpense -->
+        <test-method status="FAIL" signature="RaiseExpense(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="RaiseExpense" duration-ms="2252" started-at="2018-05-18T16:46:59Z" description="TC_RE_01" data-provider="ExpenseData" finished-at="2018-05-18T16:47:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[varun@zz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2500]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hotel]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[save]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <span class="fa fa-angle-down ng-scope"></span> is not clickable at point (1312, 19). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope md-custom136-theme" style="position: fixed;"></md-backdrop>
+  (Session info: chrome=65.0.3325.51)
+  (Driver info: chromedriver=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 144 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752), userDataDir=/tmp/.org.chromium.Chromium.it3zMq}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.51, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2b3b03fc85d084dba07c8ec80617161d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <span class="fa fa-angle-down ng-scope"></span> is not clickable at point (1312, 19). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope md-custom136-theme" style="position: fixed;"></md-backdrop>
+  (Session info: chrome=65.0.3325.51)
+  (Driver info: chromedriver=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 144 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752), userDataDir=/tmp/.org.chromium.Chromium.it3zMq}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.51, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2b3b03fc85d084dba07c8ec80617161d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:332)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:345)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at Framework.TestingFramework.methods.FusionLoginLogout.LogOutFusion(FusionLoginLogout.java:86)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.GotoRaiseExpPage(RaiseExpenseHome.java:183)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.CheckRaiseExpense(RaiseExpenseHome.java:164)
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RaiseExpense -->
+        <test-method status="FAIL" signature="RaiseExpense(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="RaiseExpense" duration-ms="2077" started-at="2018-05-18T16:47:02Z" description="TC_RE_01" data-provider="ExpenseData" finished-at="2018-05-18T16:47:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[avinash@zz.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hotel]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[submit]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <span class="fa fa-angle-down ng-scope"></span> is not clickable at point (1312, 19). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope md-custom136-theme" style="position: fixed;"></md-backdrop>
+  (Session info: chrome=65.0.3325.51)
+  (Driver info: chromedriver=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752), userDataDir=/tmp/.org.chromium.Chromium.it3zMq}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.51, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2b3b03fc85d084dba07c8ec80617161d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <span class="fa fa-angle-down ng-scope"></span> is not clickable at point (1312, 19). Other element would receive the click: <md-backdrop class="md-select-backdrop md-click-catcher ng-scope md-custom136-theme" style="position: fixed;"></md-backdrop>
+  (Session info: chrome=65.0.3325.51)
+  (Driver info: chromedriver=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540471 (9c759b81a907e70363c6312294d30b6ccccc2752), userDataDir=/tmp/.org.chromium.Chromium.it3zMq}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.51, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2b3b03fc85d084dba07c8ec80617161d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:332)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:345)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at Framework.TestingFramework.methods.FusionLoginLogout.LogOutFusion(FusionLoginLogout.java:86)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.GotoRaiseExpPage(RaiseExpenseHome.java:183)
+	at Framework.TestingFramework.methods.RaiseExpenseHome.CheckRaiseExpense(RaiseExpenseHome.java:164)
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RaiseExpense -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Framework.TestingFramework.test.RaiseExpenseTest@69379752]" name="tearDown" is-config="true" duration-ms="316" started-at="2018-05-18T16:47:04Z" finished-at="2018-05-18T16:47:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Framework.TestingFramework.test.RaiseExpenseTest -->
+    </test> <!-- Simple Test1 -->
+    <test name="Simple Test" duration-ms="138633" started-at="2018-05-18T11:15:32Z" finished-at="2018-05-18T11:17:51Z">
+      <class name="Framework.TestingFramework.test.FeedbackTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Framework.TestingFramework.test.FeedbackTest@402a079c]" name="setUp" is-config="true" duration-ms="3650" started-at="2018-05-18T16:45:32Z" finished-at="2018-05-18T16:45:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:Framework.TestingFramework.test.FeedbackTest@402a079c]" name="testSetUp" is-config="true" duration-ms="5" started-at="2018-05-18T16:45:36Z" finished-at="2018-05-18T16:45:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="RaiseApproveRejectFeed()[pri:1, instance:Framework.TestingFramework.test.FeedbackTest@402a079c]" name="RaiseApproveRejectFeed" duration-ms="79805" started-at="2018-05-18T16:45:36Z" description="TC_FB_01" finished-at="2018-05-18T16:46:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RaiseApproveRejectFeed -->
+        <test-method status="PASS" signature="DuplicateFeedback()[pri:2, instance:Framework.TestingFramework.test.FeedbackTest@402a079c]" name="DuplicateFeedback" duration-ms="54952" started-at="2018-05-18T16:46:56Z" description="TC_FB_02" finished-at="2018-05-18T16:47:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DuplicateFeedback -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Framework.TestingFramework.test.FeedbackTest@402a079c]" name="tearDown" is-config="true" duration-ms="177" started-at="2018-05-18T16:47:51Z" finished-at="2018-05-18T16:47:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Framework.TestingFramework.test.FeedbackTest -->
+    </test> <!-- Simple Test -->
+  </suite> <!-- Example test run -->
+</testng-results>
