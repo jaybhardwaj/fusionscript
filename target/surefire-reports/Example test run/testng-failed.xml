@@ -4,19 +4,6 @@
   <listeners>
     <listener class-name="Framework.TestingFramework.annotationHandler.AnnotationTest"/>
   </listeners>
-  <test name="Simple Test1(failed)" parallel="tests">
-    <classes>
-      <class name="Framework.TestingFramework.test.RaiseExpenseTest">
-        <methods>
-          <include name="RaiseExpense" invocation-numbers="0 1 2 3"/>
-          <include name="beforeSuite"/>
-          <include name="tearDown"/>
-          <include name="testSetUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Framework.TestingFramework.test.RaiseExpenseTest -->
-    </classes>
-  </test> <!-- Simple Test1(failed) -->
   <test name="Simple Test(failed)" parallel="tests">
     <classes>
       <class name="Framework.TestingFramework.test.FeedbackTest">
