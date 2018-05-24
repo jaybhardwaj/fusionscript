@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 24, 2018 04:04:42 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 24, 2018 05:07:44 PM</span>
 				</a>
 			</li>
 			<li>
@@ -124,14 +124,14 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>FeedbackTest</span>
-						<span class='test-time'>May 24, 2018 04:04:54 PM</span>
+						<span class='test-time'>May 24, 2018 05:08:26 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 24, 2018 04:04:54 PM</span>
-	<span class='label end-time'>May 24, 2018 04:05:08 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+839ms</span>
+	<span class='label start-time'>May 24, 2018 05:08:26 PM</span>
+	<span class='label end-time'>May 24, 2018 05:08:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+989ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
@@ -139,7 +139,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>RaiseApproveRejectFeed(TC_FB_01)</h5>
 						<span class='test-status right fail'>fail</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 12s+790ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+36ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -154,7 +154,7 @@
 										<tbody>
 												<tr class='log' status='fail'>
 													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>4:05:07 PM</td>
+													<td class='timestamp'>5:08:28 PM</td>
 													<td class='step-details'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
@@ -163,8 +163,8 @@ Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.1
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: aa59862c0aa492bb67f15c4a9f468a5f
-*** Element info: {Using=xpath, value=//*[@id='nav-lg-login-btn']/button}
+Session ID: 74d3b0428b903d9aa0c5732113e78cf7
+*** Element info: {Using=xpath, value=//button[@ng-click='$mdMenu.open($event)']/span}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -181,26 +181,14 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:423)
 	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:305)
-	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:53)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at Framework.TestingFramework.utils.WaitUtil.explicitWaitByVisibilityOfElement(WaitUtil.java:21)
-	at Framework.TestingFramework.methods.FusionLoginLogout.LoginToFusion(FusionLoginLogout.java:60)
-	at Framework.TestingFramework.methods.FeedBackHome.GotoFeedbackPage(FeedBackHome.java:312)
+	at com.sun.proxy.$Proxy9.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:175)
+	at Framework.TestingFramework.methods.FeedBackHome.GotoFeedbackPage(FeedBackHome.java:306)
 	at Framework.TestingFramework.methods.FeedBackHome.CheckRaisefeedback(FeedBackHome.java:176)
 	at Framework.TestingFramework.test.FeedbackTest.RaiseApproveRejectFeed(FeedbackTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -234,7 +222,7 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
 					<div class='collapsible-header'>
 						<h5 class='node-name'>DuplicateFeedback(TC_FB_02)</h5>
 						<span class='test-status right fail'>fail</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+13ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+846ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -249,7 +237,7 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
 										<tbody>
 												<tr class='log' status='fail'>
 													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>4:05:08 PM</td>
+													<td class='timestamp'>5:08:29 PM</td>
 													<td class='step-details'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
@@ -258,7 +246,7 @@ Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.1
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: aa59862c0aa492bb67f15c4a9f468a5f
+Session ID: 74d3b0428b903d9aa0c5732113e78cf7
 *** Element info: {Using=xpath, value=//button[@ng-click='$mdMenu.open($event)']/span}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -419,7 +407,7 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>May 24, 2018 04:04:54 PM</td>
+                                                        <td>May 24, 2018 05:08:26 PM</td>
                                                         <td class='linked' test-id='2'>FeedbackTest.RaiseApproveRejectFeed(TC_FB_01)</td>
                                                         <td><pre><pre>org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=66.0.3359.181)
@@ -429,8 +417,8 @@ Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.1
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: aa59862c0aa492bb67f15c4a9f468a5f
-*** Element info: {Using=xpath, value=//*[@id='nav-lg-login-btn']/button}
+Session ID: 74d3b0428b903d9aa0c5732113e78cf7
+*** Element info: {Using=xpath, value=//button[@ng-click='$mdMenu.open($event)']/span}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -447,26 +435,14 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:423)
 	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:305)
-	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:53)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at Framework.TestingFramework.utils.WaitUtil.explicitWaitByVisibilityOfElement(WaitUtil.java:21)
-	at Framework.TestingFramework.methods.FusionLoginLogout.LoginToFusion(FusionLoginLogout.java:60)
-	at Framework.TestingFramework.methods.FeedBackHome.GotoFeedbackPage(FeedBackHome.java:312)
+	at com.sun.proxy.$Proxy9.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:175)
+	at Framework.TestingFramework.methods.FeedBackHome.GotoFeedbackPage(FeedBackHome.java:306)
 	at Framework.TestingFramework.methods.FeedBackHome.CheckRaisefeedback(FeedBackHome.java:176)
 	at Framework.TestingFramework.test.FeedbackTest.RaiseApproveRejectFeed(FeedbackTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -492,7 +468,7 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
 </pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>May 24, 2018 04:05:07 PM</td>
+                                                        <td>May 24, 2018 05:08:28 PM</td>
                                                         <td class='linked' test-id='3'>FeedbackTest.DuplicateFeedback(TC_FB_02)</td>
                                                         <td><pre><pre>org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=66.0.3359.181)
@@ -502,7 +478,7 @@ Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.1
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: aa59862c0aa492bb67f15c4a9f468a5f
+Session ID: 74d3b0428b903d9aa0c5732113e78cf7
 *** Element info: {Using=xpath, value=//button[@ng-click='$mdMenu.open($event)']/span}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -588,19 +564,19 @@ Session ID: aa59862c0aa492bb67f15c4a9f468a5f
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 24, 2018 04:04:42 PM</div>
+					<div class='panel-lead'>May 24, 2018 05:07:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 24, 2018 04:05:08 PM</div>
+			 		<div class='panel-lead'>May 24, 2018 05:08:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>26,010ms</div>
+					<div class='panel-lead'>44,832ms</div>
 				</div>
 			</div>
 		</div>
