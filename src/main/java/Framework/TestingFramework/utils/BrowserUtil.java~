@@ -29,7 +29,6 @@ public class BrowserUtil {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--test-type");
 			options.addArguments("--disable-popup-blocking");
-			options.addArguments("no-sandbox");
 			System.out.println(System.getProperty("webdriver.chrome.driver"));
 			DesiredCapabilities caps = DesiredCapabilities.chrome();
             LoggingPreferences logPrefs = new LoggingPreferences();
