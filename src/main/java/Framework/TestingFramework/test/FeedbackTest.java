@@ -16,8 +16,8 @@ public class FeedbackTest extends BaseTest
 {
 	EventFiringWebDriver driver;
 	FeedBackHome feedback;
-	String userName1="manu@zz.com";
-	String userName2="jyoti@zz.com";
+	String userName1="ankit@zz.com";
+	String userName2="mehul@zz.com";
 	
 	@BeforeClass
 	public void testSetUp()
