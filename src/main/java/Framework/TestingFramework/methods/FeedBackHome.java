@@ -151,12 +151,13 @@ public class FeedBackHome
 	public WebElement SearchUserToApprove;
 	@FindAll({
 		@FindBy(xpath = "//button[@ng-click='okClicked()']"),
-		@FindBy(xpath = "//button//span[text()='OK']")
+		@FindBy(xpath = "//button//span[text()='OK']"),
+		@FindBy(xpath = "//button[@ng-click='closeAlertDialog()']")
 	})
 	public WebElement OkBtn;
 	@FindAll({
 		@FindBy(xpath = "//a[@aria-label='HR']"),
-		@FindBy(xpath = "//a/i [@class='fa fa-users']"),		
+		@FindBy(xpath = "//a/i [@class='fa fa-users']")		
 	})
 	public WebElement HRSection;
 	
@@ -376,6 +377,8 @@ public class FeedBackHome
 			System.out.println("Alert Msg-->>"+Msg);
 			if(Msg.equalsIgnoreCase("Feedback already raised for the User."))
 			{
+				WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.OkBtn);
+				OkBtn.click();
 				return true;
 			}else
 				{

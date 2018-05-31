@@ -6,7 +6,6 @@
       <class name="Framework.TestingFramework.test.FeedbackTest">
         <methods>
           <include name="DuplicateFeedback"/>
-          <include name="RaiseApproveRejectFeed"/>
           <include name="testSetUp"/>
           <include name="beforeSuite"/>
           <include name="tearDown"/>

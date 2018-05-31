@@ -1,10 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 27.091 sec <<< FAILURE! - in TestSuite
-RaiseApproveRejectFeed(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 12.867 sec  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-chrome not reachable
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 120.498 sec <<< FAILURE! - in TestSuite
+RaiseApproveRejectFeed(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 92.524 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -12,13 +13,14 @@ Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.1
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: aa59862c0aa492bb67f15c4a9f468a5f
-*** Element info: {Using=xpath, value=//*[@id='nav-lg-login-btn']/button}
+Session ID: 223c44d5b037710132ac5cdc3ebbaa13
+*** Element info: {Using=xpath, value=//span[@class='md-toast-text ng-binding flex']}
 	at Framework.TestingFramework.test.FeedbackTest.RaiseApproveRejectFeed(FeedbackTest.java:33)
 
-DuplicateFeedback(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 0.975 sec  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-chrome not reachable
+DuplicateFeedback(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 1.349 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -26,7 +28,7 @@ Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.1
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: aa59862c0aa492bb67f15c4a9f468a5f
+Session ID: 223c44d5b037710132ac5cdc3ebbaa13
 *** Element info: {Using=xpath, value=//button[@ng-click='$mdMenu.open($event)']/span}
 	at Framework.TestingFramework.test.FeedbackTest.DuplicateFeedback(FeedbackTest.java:40)
 

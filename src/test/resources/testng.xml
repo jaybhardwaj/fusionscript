@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Example test run" parallel= "tests" thread-count="2">
+
+<suite name="Example test run" parallel= "tests" thread-count="1">
   <listeners>
   	<listener class-name="Framework.TestingFramework.annotationHandler.AnnotationTest"/>
   </listeners>

@@ -1,25 +1,23 @@
 package Framework.TestingFramework.test;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import Framework.TestingFramework.annotationHandler.AnnotationTest;
 import Framework.TestingFramework.base.BaseTest;
 import Framework.TestingFramework.methods.FeedBackHome;
 import Framework.TestingFramework.reportHandler.ExtentTestNGITestListener;
-import Framework.TestingFramework.utils.ExcelRead;
 
 @Listeners({AnnotationTest.class, ExtentTestNGITestListener.class})
 public class FeedbackTest extends BaseTest
 {
 	EventFiringWebDriver driver;
 	FeedBackHome feedback;
-	String userName="vivek@zz.com";
+	String userName1="manu@zz.com";
+	String userName2="jyoti@zz.com";
 	
 	@BeforeClass
 	public void testSetUp()
@@ -30,15 +28,15 @@ public class FeedbackTest extends BaseTest
 	@Test(description = "TC_FB_01")
 	public void RaiseApproveRejectFeed() throws InterruptedException, ClassNotFoundException, SQLException
 	{
-	  Assert.assertTrue(feedback.CheckRaisefeedback(userName,"Appreciation",""), "Feedback for "+userName+" is Not raised Successfully");
-	  Assert.assertTrue(feedback.ApproveRejectfeedback(userName,"Appreciation","Approve"), "Feedback for "+userName+" is Not Approved/Reject Successfully");
+	  Assert.assertTrue(feedback.CheckRaisefeedback(userName1,"Appreciation",""), "Feedback for "+userName1+" is Not raised Successfully");
+	  Assert.assertTrue(feedback.ApproveRejectfeedback(userName1,"Appreciation","Approve"), "Feedback for "+userName1+" is Not Approved/Reject Successfully");
 	}
 	
 	@Test(description = "TC_FB_02")
 	public void DuplicateFeedback() throws ClassNotFoundException, SQLException, InterruptedException
 	{
-		  Assert.assertTrue(feedback.CheckDuplicateFeedback("umesh@zz.com","Escalation"), "Duplicate Escalation raised Successfully");
-		  Assert.assertTrue(feedback.CheckDuplicateFeedback("umesh@zz.com","Appreciation"), "Duplicate Escalation raised Successfully");
+		  Assert.assertTrue(feedback.CheckDuplicateFeedback(userName2,"Escalation"), "Duplicate Escalation raised Successfully");
+		  Assert.assertTrue(feedback.CheckDuplicateFeedback(userName2,"Appreciation"), "Duplicate Appreciation raised Successfully");
 	}
 	/*@Test
 	public void ChecktabData()
