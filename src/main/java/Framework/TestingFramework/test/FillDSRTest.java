@@ -25,18 +25,18 @@ public class FillDSRTest extends BaseTest
     	DsrHome = new DSRHome(driver);
 	}
 	
-	@Test(dataProvider="empLogin",description = "TC_LLN_02")
+	@Test(description = "TC_DSR_01")
 	public void fillDsr(String userName, String password)
 	{
 	  Assert.assertTrue(DsrHome.fillDsr(userName,password,null), "Filling DSR for"+ userName+" is Not Successfull");
 	}
 	
-	@DataProvider(name="empLogin")
+	/*@DataProvider(name="empLogin")dataProvider="empLogin",
 	public String[][] loginData() throws IOException
 	{
 		ExcelRead Exl2 = new ExcelRead();
 		String[][] arrayObject = Exl2.readExcel("/home/psslass11153/Desktop","LoginDetails.xlsx","Sheet2");
 		return arrayObject;
-	}
+	}*/
 ///my name is khan
 }

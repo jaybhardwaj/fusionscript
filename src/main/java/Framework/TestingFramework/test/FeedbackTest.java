@@ -17,7 +17,7 @@ public class FeedbackTest extends BaseTest
 	EventFiringWebDriver driver;
 	FeedBackHome feedback;
 	String userName1="ankit@zz.com";
-	String userName2="mehul@zz.com";
+	String userName2="virat@zz.com";
 	
 	@BeforeClass
 	public void testSetUp()
@@ -28,8 +28,8 @@ public class FeedbackTest extends BaseTest
 	@Test(description = "TC_FB_01")
 	public void RaiseApproveRejectFeed() throws InterruptedException, ClassNotFoundException, SQLException
 	{
-	  Assert.assertTrue(feedback.CheckRaisefeedback(userName1,"Appreciation",""), "Feedback for "+userName1+" is Not raised Successfully");
-	  Assert.assertTrue(feedback.ApproveRejectfeedback(userName1,"Appreciation","Approve"), "Feedback for "+userName1+" is Not Approved/Reject Successfully");
+	  Assert.assertTrue(feedback.CheckRaisefeedback(userName1,"Escalation",""), "Feedback for "+userName1+" is Not raised Successfully");
+	  Assert.assertTrue(feedback.ApproveRejectfeedback(userName1,"Escalation","Approve"), "Feedback for "+userName1+" is Not Approved/Reject Successfully");
 	}
 	
 	@Test(description = "TC_FB_02")

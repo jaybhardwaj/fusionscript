@@ -14,9 +14,9 @@
       <class name="Framework.TestingFramework.test.RaiseExpenseTest"/>
     </classes>
   </test>
-<!--   <test name="Simple Test3">
+<test name="Simple Test3">
 	<classes>
-		<class name="Framework.TestingFramework.test.GoogleHomePageTest3"/>
+		<class name="Framework.TestingFramework.test.FillDSRTest"/>
 	</classes>
-  </test> -->
+  </test>
 </suite>
