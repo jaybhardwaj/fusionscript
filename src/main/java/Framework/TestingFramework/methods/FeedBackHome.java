@@ -1,5 +1,4 @@
 package Framework.TestingFramework.methods;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.openqa.selenium.By;
@@ -20,6 +19,8 @@ public class FeedBackHome
 	int time = Integer.parseInt(BaseTest.env.get("waitTime"));
 	String supervisor=null;
 	String UserFullName=null;
+	
+	CommonMethods CMT ;
 	
 	@FindAll({
 		@FindBy(xpath = "//div[@class='md-toast-content']//button")
@@ -165,6 +166,7 @@ public class FeedBackHome
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		jse = (JavascriptExecutor)driver;
+		CMT = new CommonMethods(driver);
 	}
 	
 	public boolean CheckRaisefeedback(String user,String FeedBackType,String date) throws InterruptedException, ClassNotFoundException, SQLException
@@ -174,7 +176,7 @@ public class FeedBackHome
 		supervisor=temp[0];
 		UserFullName=temp[1];
 		System.out.println("CheckRaisefeedback-->"+UserFullName);
-		if(GotoFeedbackPage(supervisor))
+		if(CMT.GotoFeedbackPage(supervisor))
 		{
 			WaitUtil.sleep(5000);
 			Raisefeedback(FeedBackType,UserFullName);
@@ -240,7 +242,7 @@ public class FeedBackHome
 		String[] temp=findSupervisor(supervisor);
 		supervisor=temp[0];
 		System.out.println("ApproveRejectfeedback-->"+UserFullName);
-		if(GotoFeedbackPage(supervisor))
+		if(CMT.GotoFeedbackPage(supervisor))
 		{
 			WaitUtil.sleep(5000);
 			WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.MyApprovals);
@@ -361,7 +363,7 @@ public class FeedBackHome
 		String[] temp=findSupervisor(user);
 		supervisor=temp[0];
 		UserFullName=temp[1];
-		if(GotoFeedbackPage(supervisor))
+		if(CMT.GotoFeedbackPage(supervisor))
 		{
 			WaitUtil.sleep(5000);
 			Raisefeedback(FeedBackType,UserFullName);

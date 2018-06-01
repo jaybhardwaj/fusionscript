@@ -1,34 +1,66 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 120.498 sec <<< FAILURE! - in TestSuite
-RaiseApproveRejectFeed(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 92.524 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+Tests run: 7, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 152.847 sec <<< FAILURE! - in TestSuite
+RaiseApproveRejectFeed(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 73.01 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})' (tried for 30 second(s) with 500 milliseconds interval)
+	at Framework.TestingFramework.test.FeedbackTest.RaiseApproveRejectFeed(FeedbackTest.java:31)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: 223c44d5b037710132ac5cdc3ebbaa13
-*** Element info: {Using=xpath, value=//span[@class='md-toast-text ng-binding flex']}
-	at Framework.TestingFramework.test.FeedbackTest.RaiseApproveRejectFeed(FeedbackTest.java:33)
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.FeedbackTest.RaiseApproveRejectFeed(FeedbackTest.java:31)
 
-DuplicateFeedback(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 1.349 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 3.13.0-141-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+DuplicateFeedback(Framework.TestingFramework.test.FeedbackTest)  Time elapsed: 66.462 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})' (tried for 30 second(s) with 500 milliseconds interval)
+	at Framework.TestingFramework.test.FeedbackTest.DuplicateFeedback(FeedbackTest.java:38)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: 223c44d5b037710132ac5cdc3ebbaa13
-*** Element info: {Using=xpath, value=//button[@ng-click='$mdMenu.open($event)']/span}
-	at Framework.TestingFramework.test.FeedbackTest.DuplicateFeedback(FeedbackTest.java:40)
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.FeedbackTest.DuplicateFeedback(FeedbackTest.java:38)
+
+RaiseExpense(Framework.TestingFramework.test.RaiseExpenseTest)  Time elapsed: 0.035 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+
+RaiseExpense(Framework.TestingFramework.test.RaiseExpenseTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+
+RaiseExpense(Framework.TestingFramework.test.RaiseExpenseTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+
+RaiseExpense(Framework.TestingFramework.test.RaiseExpenseTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.RaiseExpenseTest.RaiseExpense(RaiseExpenseTest.java:35)
+
+fillDsr(Framework.TestingFramework.test.FillDSRTest)  Time elapsed: 2.067 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: EventFiringWebDriver
+	at Framework.TestingFramework.test.FillDSRTest.fillDsr(FillDSRTest.java:32)
 

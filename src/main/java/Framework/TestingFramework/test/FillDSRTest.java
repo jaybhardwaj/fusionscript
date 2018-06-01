@@ -18,7 +18,8 @@ public class FillDSRTest extends BaseTest
 {
 	EventFiringWebDriver driver;
 	DSRHome DsrHome;
-	
+	String userName = "udit@zz.com";
+	String password = "Qwerty@1";
 	@BeforeClass
 	public void testSetUp() {
     	driver = BaseTest.findMyDriver();
@@ -26,7 +27,7 @@ public class FillDSRTest extends BaseTest
 	}
 	
 	@Test(description = "TC_DSR_01")
-	public void fillDsr(String userName, String password)
+	public void fillDsr()
 	{
 	  Assert.assertTrue(DsrHome.fillDsr(userName,password,null), "Filling DSR for"+ userName+" is Not Successfull");
 	}
