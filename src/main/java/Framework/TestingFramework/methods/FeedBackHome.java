@@ -1,7 +1,6 @@
 package Framework.TestingFramework.methods;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,18 +8,16 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import Framework.TestingFramework.base.BaseTest;
-import Framework.TestingFramework.utils.DatabaseUtil;
 import Framework.TestingFramework.utils.WaitUtil;
 
 public class FeedBackHome
 {
+	CommonMethods CMT ;
 	WebDriver driver;
 	JavascriptExecutor jse ;
 	int time = Integer.parseInt(BaseTest.env.get("waitTime"));
 	String supervisor=null;
 	String UserFullName=null;
-	
-	CommonMethods CMT ;
 	
 	@FindAll({
 		@FindBy(xpath = "//div[@class='md-toast-content']//button")
@@ -172,7 +169,7 @@ public class FeedBackHome
 	public boolean CheckRaisefeedback(String user,String FeedBackType,String date) throws InterruptedException, ClassNotFoundException, SQLException
 	{
 		System.out.println("CheckRaisefeedback-->"+user);
-		String[] temp=findSupervisor(user);
+		String[] temp=CMT.findSupervisor(user);
 		supervisor=temp[0];
 		UserFullName=temp[1];
 		System.out.println("CheckRaisefeedback-->"+UserFullName);
@@ -239,7 +236,7 @@ public class FeedBackHome
 	
 	public boolean ApproveRejectfeedback(String user,String FeedBackType,String Action) throws InterruptedException, ClassNotFoundException, SQLException
 	{
-		String[] temp=findSupervisor(supervisor);
+		String[] temp=CMT.findSupervisor(supervisor);
 		supervisor=temp[0];
 		System.out.println("ApproveRejectfeedback-->"+UserFullName);
 		if(CMT.GotoFeedbackPage(supervisor))
@@ -282,7 +279,7 @@ public class FeedBackHome
 		return true;
 	}
 	
-	public String[] findSupervisor(String user) throws ClassNotFoundException, SQLException
+	/*public String[] findSupervisor(String user) throws ClassNotFoundException, SQLException
 	{
 		String query=null;
 		String[] Result = new String[2];
@@ -301,9 +298,9 @@ public class FeedBackHome
 			System. out.println(Result[1]);
 			db.ConnectionClose();
 		return Result;
-	}
+	}*/
 	
-	public Boolean GotoFeedbackPage(String user) throws InterruptedException
+	/*public Boolean GotoFeedbackPage(String user) throws InterruptedException
 	{
 		FusionLoginLogout fusionloginlogout= new FusionLoginLogout(driver);
 		if(driver.findElements(By.xpath("//button[@ng-click='$mdMenu.open($event)']/span")).size() != 0)
@@ -356,11 +353,11 @@ public class FeedBackHome
 			return false;
 		      }	   
 		return true;
-	}
+	}*/
 
 	public boolean CheckDuplicateFeedback(String user,String FeedBackType) throws ClassNotFoundException, SQLException, InterruptedException 
 	{
-		String[] temp=findSupervisor(user);
+		String[] temp=CMT.findSupervisor(user);
 		supervisor=temp[0];
 		UserFullName=temp[1];
 		if(CMT.GotoFeedbackPage(supervisor))
