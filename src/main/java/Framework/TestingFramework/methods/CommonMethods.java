@@ -48,23 +48,30 @@ public class CommonMethods
         fusionloginlogout= new FusionLoginLogout(driver);
 	}
 	
-	public Boolean GotoFeedbackPage(String user) throws InterruptedException
+//This method logins for parameter-user and leads to the page required.
+	public Boolean GotoFeedbackPage(String user,String SectionXpath,String pageMenuXpath,String pageName,String pageXpath) throws InterruptedException
 	{
-		//FusionLoginLogout fusionloginlogout= new FusionLoginLogout(driver);
 		if(driver.findElements(By.xpath("//button[@ng-click='$mdMenu.open($event)']/span")).size() != 0)
 		{
+			//if already logined then do log-out.
 			fusionloginlogout.LogOutFusion();
 			WaitUtil.sleep(3000);
 		}
-		
 		boolean Loginresult = fusionloginlogout.LoginToFusion(user,"Qwerty@1");
 		if(Loginresult)
 		{
+			WebElement RequiredSection = driver.findElement(By.xpath(SectionXpath));
+			//WebElement RequiredPageMenu=null;
+			WebElement RequiredPage = driver.findElement(By.xpath(pageXpath));
+			/*if(pageMenuXpath != null)
+			{
+				RequiredPageMenu = driver.findElement(By.xpath(pageMenuXpath));				
+			}*/
 			System.out.println("Login Successful");
 			WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.PageHeading);
 			String Heading= PageHeading.getText();
 			System.out.println("We are at page-->"+Heading);
-			if(Heading.equalsIgnoreCase("Feedback"))
+			if(Heading.equalsIgnoreCase(pageName))
 			{
 				System.out.println("Already at Feedback Page.");
 			}else
@@ -79,20 +86,32 @@ public class CommonMethods
 									System.out.println("Inside ToggleNav Bar Clicked");
 								}
 						}
-					if(HRSection.isDisplayed() && HRSection.isEnabled())
+					if(RequiredSection.isDisplayed() && RequiredSection.isEnabled())
 						{
-							System.out.println("Inside HR Section");
-							WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.HRSection);
-							HRSection.click();	
+							WaitUtil.explicitWaitByVisibilityOfElement(driver, time, RequiredSection);
+							RequiredSection.click();
+							System.out.println("Inside RequiredSection");
 						}
-					if(driver.findElements(By.xpath("//a[contains(text(),'FEEDBACK')]")).size() != 0)
+					if(driver.findElements(By.xpath(pageXpath)).size() != 0)
 						{
-							WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.FeedBackMenuBtn);
-							FeedBackMenuBtn.click();
-							WaitUtil.sleep(5000);
+							if(pageMenuXpath.equalsIgnoreCase("NotApplicable"))
+							{
+								WaitUtil.explicitWaitByVisibilityOfElement(driver, time, RequiredPage);
+								RequiredPage.click();
+								WaitUtil.sleep(5000);
+							}else
+								{
+								    WebElement RequiredPageMenu = driver.findElement(By.xpath(pageMenuXpath));
+								    WaitUtil.explicitWaitByVisibilityOfElement(driver, time, RequiredPageMenu);
+									RequiredPageMenu.click();
+									WaitUtil.sleep(1500);
+									WaitUtil.explicitWaitByVisibilityOfElement(driver, time, RequiredPage);
+									RequiredPage.click();
+									WaitUtil.sleep(5000);
+								}    
 						}else
 							{
-								System.out.println("FeedBack Module is not given to this user");
+								System.out.println(pageName+" Module is not given to this user");
 								return false;
 							}	
 				}
@@ -103,6 +122,7 @@ public class CommonMethods
 		return true;
 	}
 	
+//This method finds supervisor (emailId-in resultSet[0]) of the parameter-user and user's full name(in resultSet[1]).	
 	public String[] findSupervisor(String user) throws ClassNotFoundException, SQLException
 	{
 		String query=null;

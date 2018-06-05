@@ -1,5 +1,4 @@
 package Framework.TestingFramework.methods;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,14 +10,20 @@ import Framework.TestingFramework.utils.WaitUtil;
 
 public class RaiseExpenseHome 
 {
+	CommonMethods CMT ;
 	WebDriver driver;
 	JavascriptExecutor jse ;
 	int time = Integer.parseInt(BaseTest.env.get("waitTime"));
+	String pageName = "feedback";
+	String pageSectionXpath = "//a[@aria-label='Finance']";
+	String PageXpath = "//a[contains(text(),'My Expenses')]";
+	String pageMenuXpath = "//a[contains(text(),'EXPENSE')]";
 	
 	public RaiseExpenseHome(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		jse = (JavascriptExecutor)driver;
+		CMT = new CommonMethods(driver);
 	}
 	@FindAll({
 		@FindBy(xpath = "//a[contains(text(),'EXPENSE')]")
@@ -161,7 +166,7 @@ public class RaiseExpenseHome
 	
 	public boolean CheckRaiseExpense(String user,String Amount,String Type,String Action) throws InterruptedException
 	{
-		if(GotoRaiseExpPage(user))
+		if(CMT.GotoFeedbackPage(user,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
 		{
 			int ExpAmount = Integer.parseInt(Amount);
 			raiseHotelExp(ExpAmount,Action);		
@@ -175,7 +180,7 @@ public class RaiseExpenseHome
 		
 	}
 	
-	public Boolean GotoRaiseExpPage(String user) throws InterruptedException
+/*	public Boolean GotoRaiseExpPage(String user) throws InterruptedException
 	{
 		FusionLoginLogout fusionloginlogout= new FusionLoginLogout(driver);
 		if(driver.findElements(By.xpath("//button[@ng-click='$mdMenu.open($event)']/span")).size() != 0)
@@ -232,7 +237,7 @@ public class RaiseExpenseHome
 		      }	   
 		return true;
 	}
-	
+	*/
 //Functions To raise various types of Expenses===============================>>>>>>>>>>>>>>>>>>>>>
 		public void raiseHotelExp(int ExpAmount,String Reqstatus) throws NullPointerException, InterruptedException
 		{
@@ -266,9 +271,12 @@ public class RaiseExpenseHome
 	    	SelectCurrencyOption.click();
 	    	WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.UploadFile);
 	    	UploadFile.sendKeys("/home/psslass11153/Downloads/krishna.jpg");
-	    	Thread.sleep(1000);
+	    	WaitUtil.sleep(1000);
 	    	CommentsExp.sendKeys("Please Approve as soon as possible.");
-	    	ReasonForExp.submit();
+	    	//ReasonForExp.submit();
+	    	WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.saveBtn);
+	    	saveBtn.click();
+	    	WaitUtil.sleep(1000);
 	    	WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.Toast);
 	    	String Msg=Toast.getText();
 			System.out.println("Raise Expense Toast Status->"+Msg);
