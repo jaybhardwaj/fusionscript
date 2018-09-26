@@ -36,16 +36,7 @@ public class  DatabaseUtil
         	   Statement stmt = con.createStatement();					
        
        			// Execute the SQL Query. Store results in ResultSet		
-         		ResultSet rs= stmt.executeQuery(query);
-         		
-        	/*	rs.beforeFirst();
-				while (rs.next())
-				{					
-			        		String myName = rs.getString(1);
-			        		String myemail = rs.getString(2);
-                            System. out.println(myName);
-                            System.out.println(myemail);
-                }*/		
+         		ResultSet rs= stmt.executeQuery(query);		
 				return rs;			
 		}
 		public void ConnectionClose() throws SQLException

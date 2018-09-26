@@ -81,13 +81,8 @@ public class ExcelRead
             }
         	
         }
-         System.out.println();
+//         System.out.println();
     }
-    
 	return arrayExcelData;
-
-    
-
     }
-
 }

@@ -177,7 +177,7 @@ public class FeedBackHome
 		supervisor=temp[0];
 		UserFullName=temp[1];
 		System.out.println("CheckRaisefeedback-->"+UserFullName);
-		if(CMT.GotoFeedbackPage(supervisor,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
+		if(CMT.GotoRequiredPage(supervisor,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
 		{
 			WaitUtil.sleep(5000);
 			Raisefeedback(FeedBackType,UserFullName);
@@ -243,7 +243,7 @@ public class FeedBackHome
 		String[] temp=CMT.findSupervisor(supervisor);
 		supervisor=temp[0];
 		System.out.println("ApproveRejectfeedback-->"+UserFullName);
-		if(CMT.GotoFeedbackPage(supervisor,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
+		if(CMT.GotoRequiredPage(supervisor,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
 		{
 			WaitUtil.sleep(5000);
 			WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.MyApprovals);
@@ -364,7 +364,7 @@ public class FeedBackHome
 		String[] temp=CMT.findSupervisor(user);
 		supervisor=temp[0];
 		UserFullName=temp[1];
-		if(CMT.GotoFeedbackPage(supervisor,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
+		if(CMT.GotoRequiredPage(supervisor,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
 		{
 			WaitUtil.sleep(5000);
 			Raisefeedback(FeedBackType,UserFullName);

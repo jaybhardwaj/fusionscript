@@ -166,7 +166,7 @@ public class RaiseExpenseHome
 	
 	public boolean CheckRaiseExpense(String user,String Amount,String Type,String Action) throws InterruptedException
 	{
-		if(CMT.GotoFeedbackPage(user,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
+		if(CMT.GotoRequiredPage(user,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
 		{
 			int ExpAmount = Integer.parseInt(Amount);
 			raiseHotelExp(ExpAmount,Action);		

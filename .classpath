@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/psslass11153/Downloads/sikulixsetup-1.1.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

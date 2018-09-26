@@ -16,24 +16,24 @@ public class FusionLoginLogout {
 	int time = Integer.parseInt(BaseTest.env.get("waitTime"));
 	
 	@FindAll({
-		@FindBy(xpath = "//*[@id='nav-lg-login-btn']/button")
+		@FindBy(xpath = "//a[@ng-click='openLoginDialog($event)']")
 	})
 	public WebElement SignInBtn;
 	
 	@FindAll({
-		@FindBy(xpath = "//input[@type='email' and @ng-model='loginInfo.useremail']"),
-		@FindBy(xpath = "//input[@type='email']")
+		@FindBy(xpath = "//form[@name='loginForm']//input[@ng-model='loginInfo.useremail']"),
+		@FindBy(xpath = "//form[@name='loginForm']//input[@name='useremail']")
 	})
 	public WebElement UserId;
 	
 	@FindAll({
-		@FindBy(xpath = "//input[@type='password ']"),
-		@FindBy(xpath = "//input[@type='password' and @ng-model='loginInfo.userpassword']")
+		@FindBy(xpath = "//form[@name='loginForm']//input[@name='userpassword']"),
+		@FindBy(xpath = "//form[@name='loginForm']//input[@ng-model='loginInfo.userpassword']")
 	})
 	public WebElement Pass;
 	
 	@FindAll({
-		@FindBy(xpath = "//button[@type='submit']")
+		@FindBy(xpath = "//form[@name='loginForm']//button[@submit-button='Log In']")
 	})
 	public WebElement LoginBtn;
 	
@@ -71,11 +71,12 @@ public class FusionLoginLogout {
 	    	Pass.sendKeys(Password);
 	    	WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.LoginBtn);
 	    	LoginBtn.click(); 	
-	    	WaitUtil.sleep(5000);
+	    	WaitUtil.sleep(10000);
 	    	if(driver.findElements(By.xpath("//span[@class='fa fa-angle-down ng-scope']")).size() != 0)
 			{
 	    		return true;
 			}
+	    	System.out.println("May be Session TimeOut.");
     		return false;
 		
     }
@@ -84,6 +85,7 @@ public class FusionLoginLogout {
 		WaitUtil.sleep(2000);
 		WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.LogOutMenuBtn);
 		LogOutMenuBtn.click();
+		WaitUtil.sleep(1000);
 		WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.LogOutBtn);
 		LogOutBtn.click();
 	}

@@ -6,7 +6,7 @@
   </listeners>
   <test name="Simple Test">
     <classes>
-      <class name="Framework.TestingFramework.test.FeedbackTest"/>
+      <class name="Framework.TestingFramework.test.RequisitionTest"/>
     </classes>
   </test>
 <!--  <test name="Simple Test1">
