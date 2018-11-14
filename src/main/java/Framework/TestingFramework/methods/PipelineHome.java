@@ -12,6 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
 import Framework.TestingFramework.base.BaseTest;
 import Framework.TestingFramework.utils.WaitUtil;
 
@@ -57,19 +59,29 @@ public class PipelineHome
 		@FindBy(xpath = "//div[contains(@class,' md-active')]//md-option[3]")
 	})
 	public WebElement Option3;
-//  ******************common xpath to select option 1 and 2 in any select/multiSelect drop down**************
+//  ******************Xpath for SendDocumentLink Modal**************
 	@FindAll({
-		@FindBy(xpath = "//input[@ng-model='candidateItem.email']")
+		@FindBy(xpath = "//form[@name='candidatelink']//input[@ng-model='candidateItem.email']")
 	})
 	public WebElement canEmail;
 	@FindAll({
-		@FindBy(xpath = "//input[@ng-model='candidateItem.joiningday']")
+		@FindBy(xpath = "//form[@name='candidatelink']//input[@ng-model='candidateItem.joiningday']")
 	})
 	public WebElement joiningDate;
 	@FindAll({
-		@FindBy(xpath = "//input[@ng-model='candidateItem.contactperson']")
+		@FindBy(xpath = "//form[@name='candidatelink']//input[@ng-model='candidateItem.contactperson']")
 	})
 	public WebElement contactPerson;
+	@FindAll({
+		@FindBy(xpath = "//form[@name='candidatelink']//button[@submit-button='Send Link']")
+	})
+	public WebElement sendLinkBtn;
+	@FindAll({
+		@FindBy(xpath = "//form[@name='candidatelink']//md-select[@name='candidateType']"),
+		@FindBy(xpath = "//form[@name='candidatelink']//md-select[@ng-model='candidateItem.candidateType']")
+	})
+	public WebElement CandidateTypeSelect;
+//  ******************Xpath for SendDocumentLink Modal**************
 	@FindAll({
 		@FindBy(xpath = "//md-select[@ng-model='pipelineFilter.status']")
 	})
@@ -78,10 +90,7 @@ public class PipelineHome
 		@FindBy(xpath = "//div[contains(@class,' md-active')]//input")
 	})
 	public WebElement filterStatusSearch;
- 	@FindAll({
-		@FindBy(xpath = "//form[@name='candidatelink']//button[@submit-button='Send Link']")
-	})
-	public WebElement sendLinkBtn;
+ 	
  	@FindAll({
 		@FindBy(xpath = "//button[@ng-click='okClicked()']"),
 		@FindBy(xpath = "//button//span[text()='OK']")
@@ -129,7 +138,7 @@ public class PipelineHome
 	public WebElement negativeMarking;
 	*/
 	
-	public boolean actionOnPipelineTable(String candidate,String req,String canStatus,String action) throws InterruptedException
+	public boolean actionOnPipelineTable(String candidate,String req,String canStatus,String action,String DocumentType) throws InterruptedException
 	{
 		String RMS_UserEmail = "ajay@zz.com";
 		if(CMT.GotoRequiredPage(RMS_UserEmail,pageSectionXpath,pageMenuXpath,pageName,PageXpath))
@@ -157,15 +166,11 @@ public class PipelineHome
 			{
 				String canName = null;
 				String jobTitle = null;
-				String state = null;
 				String status = null;
-				WebElement ReqactionBtn;
 				WebElement canNameField = row.findElement(By.xpath("td[2]/a"));
 				WebElement jobTitleField = row.findElement(By.xpath("td[3]"));
-				WebElement stateField = row.findElement(By.xpath("td[8]"));
 				WebElement statusField = row.findElement(By.xpath("td[9]//label"));
 				canName = canNameField.getText();
-				state = stateField.getText();
 				status = statusField.getText();
 				if(jobTitleField.getAttribute("aria-label") == null)
 				{
@@ -181,7 +186,7 @@ public class PipelineHome
 					if(action.equalsIgnoreCase("sendLink"))
 					{
 						row.findElement(By.xpath("td//md-icon[contains(text(),'launch')]")).click();
-						return sendLink();
+						return sendLink(DocumentType);
 					}
 					else if(action.equalsIgnoreCase("sendOffer"))
 					{
@@ -201,15 +206,26 @@ public class PipelineHome
 		return false;
 	}
 	
-	private boolean sendLink()
+	private boolean sendLink(String documentType)
 	{
+		System.out.println("SendLink is called.");
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 		LocalDateTime now = LocalDateTime.now();
-		System.out.println(dtf.format(now));
+//		System.out.println(dtf.format(now));
 		WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.canEmail);
 		canEmail.click();
 		canEmail.clear();
 		canEmail.sendKeys("jaybhardwaj2991@gmail.com");
+		WaitUtil.sleep(1000);
+		if(documentType.equalsIgnoreCase("Lateral"))
+		{
+			WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.CandidateTypeSelect);
+			CandidateTypeSelect.click();
+			WaitUtil.sleep(1000);
+			WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.Option2);
+			Option2.click();
+		}
+		WaitUtil.sleep(1000);
 		WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.joiningDate);
 		joiningDate.click();
 		joiningDate.clear();
@@ -218,7 +234,9 @@ public class PipelineHome
 		contactPerson.click();
 		contactPerson.clear();
 		contactPerson.sendKeys("Jinal Doshi");
-		WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.sendLinkBtn);
+		WaitUtil.sleep(10000);
+		return true;
+		/*WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.sendLinkBtn);
 		sendLinkBtn.click();
 		WaitUtil.sleep(1000);
 		WaitUtil.explicitWaitByVisibilityOfElement(driver, time, this.OkBtn);
@@ -229,7 +247,7 @@ public class PipelineHome
 			WaitUtil.sleep(2500);
 			return true;
 		}
-		return false;
+		return false;*/
 	}
 	private boolean sendOffer()
 	{

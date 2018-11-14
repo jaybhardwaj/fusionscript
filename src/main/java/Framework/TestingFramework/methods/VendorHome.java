@@ -3,22 +3,15 @@ package Framework.TestingFramework.methods;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Screen;
-
 import com.github.javafaker.Faker;
 import Framework.TestingFramework.base.BaseTest;
 import Framework.TestingFramework.utils.WaitUtil;
@@ -543,8 +536,10 @@ public class VendorHome
 			System.out.println("vendor Registration Msg after submitting EmailID-"+Msg1);
 			if(Msg1.equalsIgnoreCase("OTP has been send successfully"))
 			{
-				String OTP = CMT.getEmailText(vendorId,password, "OTP For Login", "support@polestarllp.com", "Your OTP is:");
-				System.out.println("OTP receieved is  = "+OTP);
+				String mailText = CMT.getEmailText(vendorId,password, "OTP For Login", "support@polestarllp.com", "Your OTP is:");
+				System.out.println("mailText receieved is  = "+mailText);
+				String[] temp = mailText.split(":");
+				String OTP = temp[1].trim();
 				if(OTP != null)
 				{
 					WaitUtil.sleep(1000);
@@ -628,19 +623,6 @@ public class VendorHome
 		return false;
 	}
 	
-	/*private String getRandomNum() 
-	{
-		String SALTCHARS = "123456789";
-        StringBuilder salt = new StringBuilder();
-        Random rnd = new Random();
-        while (salt.length() < 10) 
-        { 
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            salt.append(SALTCHARS.charAt(index));
-        }
-        String randomNum = salt.toString();
-		return randomNum;
-	}*/
 
 	public boolean CompleteRegistration(String vendorId, String Password,String action) throws IOException, FindFailed, ClassNotFoundException, SQLException, InterruptedException
 	{

@@ -29,7 +29,13 @@ public class RMSFlowTest extends BaseTest
 	@Test(description = "TC_RMSFLOW_01")
 	public void RMSFlow_Test() throws InterruptedException, ClassNotFoundException, SQLException, IOException, FindFailed
 	{//String stage, String action, String type,String PreScreeningStatus															
-		  Assert.assertTrue(RM_Home.completeInterviewStage("HR Interview","Offered","Direct","false"), "HR Interview is not completed Successfully.");
+		  Assert.assertTrue(RM_Home.completeInterviewStage("HR Interview","Offered","Referral","false"), "HR Interview is not completed Successfully.");
+    }
+	
+	@Test(description = "TC_RMSFLOW_02",dependsOnMethods = { "RMSFlow_Test" })
+	public void Link() throws InterruptedException, ClassNotFoundException, SQLException, IOException, FindFailed
+	{//String stage, String action, String type,String PreScreeningStatus															
+		  Assert.assertTrue(RM_Home.test(), "HR Interview is not completed Successfully.");
     }
 
 }

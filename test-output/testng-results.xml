@@ -1,33 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="438921" started-at="2018-09-26T09:33:08Z" finished-at="2018-09-26T09:40:27Z">
+  <suite name="Default suite" duration-ms="775322" started-at="2018-11-06T10:06:15Z" finished-at="2018-11-06T10:19:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="438921" started-at="2018-09-26T09:33:08Z" finished-at="2018-09-26T09:40:27Z">
-      <class name="Framework.TestingFramework.test.RMSFlowTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Framework.TestingFramework.test.RMSFlowTest@6e1567f1]" name="beforeSuite" is-config="true" duration-ms="23" started-at="2018-09-26T15:03:08Z" finished-at="2018-09-26T15:03:08Z">
+    <test name="Default test" duration-ms="775322" started-at="2018-11-06T10:06:15Z" finished-at="2018-11-06T10:19:11Z">
+      <class name="Framework.TestingFramework.test.RequisitionTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="beforeSuite" is-config="true" duration-ms="34" started-at="2018-11-06T15:36:15Z" finished-at="2018-11-06T15:36:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Framework.TestingFramework.test.RMSFlowTest@6e1567f1]" name="setUp" is-config="true" duration-ms="12267" started-at="2018-09-26T15:03:08Z" finished-at="2018-09-26T15:03:21Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="setUp" is-config="true" duration-ms="17586" started-at="2018-11-06T15:36:15Z" finished-at="2018-11-06T15:36:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSetUp()[pri:0, instance:Framework.TestingFramework.test.RMSFlowTest@6e1567f1]" name="testSetUp" is-config="true" duration-ms="201" started-at="2018-09-26T15:03:21Z" finished-at="2018-09-26T15:03:21Z">
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="testSetUp" is-config="true" duration-ms="8576" started-at="2018-11-06T15:36:33Z" finished-at="2018-11-06T15:36:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetUp -->
-        <test-method status="PASS" signature="RMSFlow_Test()[pri:0, instance:Framework.TestingFramework.test.RMSFlowTest@6e1567f1]" name="RMSFlow_Test" duration-ms="426078" started-at="2018-09-26T15:03:21Z" description="TC_RMSFLOW_01" finished-at="2018-09-26T15:10:27Z">
+        <test-method status="PASS" signature="Create_Approve_Reject_Requisition()[pri:0, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="Create_Approve_Reject_Requisition" duration-ms="306382" started-at="2018-11-06T15:36:41Z" description="TC_Req_01" finished-at="2018-11-06T15:41:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RMSFlow_Test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Framework.TestingFramework.test.RMSFlowTest@6e1567f1]" name="tearDown" is-config="true" duration-ms="288" started-at="2018-09-26T15:10:27Z" finished-at="2018-09-26T15:10:27Z">
+        </test-method> <!-- Create_Approve_Reject_Requisition -->
+        <test-method status="PASS" signature="Assign_OpenForRefferal_Requisition()[pri:1, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="Assign_OpenForRefferal_Requisition" duration-ms="162096" started-at="2018-11-06T15:41:48Z" description="TC_Req_02" finished-at="2018-11-06T15:44:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Assign_OpenForRefferal_Requisition -->
+        <test-method status="PASS" signature="Delete_Requisition()[pri:2, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="Delete_Requisition" duration-ms="103667" started-at="2018-11-06T15:44:30Z" description="TC_Req_03" finished-at="2018-11-06T15:46:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Delete_Requisition -->
+        <test-method status="PASS" signature="TagCandidate_Requisition()[pri:3, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="TagCandidate_Requisition" duration-ms="93168" started-at="2018-11-06T15:46:14Z" description="TC_Req_04" finished-at="2018-11-06T15:47:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TagCandidate_Requisition -->
+        <test-method status="FAIL" signature="Copy_Requisition()[pri:4, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="Copy_Requisition" duration-ms="83513" started-at="2018-11-06T15:47:47Z" description="TC_Req_05" finished-at="2018-11-06T15:49:10Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})' (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})' (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at Framework.TestingFramework.utils.WaitUtil.explicitWaitByVisibilityOfElement(WaitUtil.java:21)
+	at Framework.TestingFramework.methods.CommonMethods.getToastMsg(CommonMethods.java:297)
+	at Framework.TestingFramework.methods.RequisitionHome.doTableAction(RequisitionHome.java:357)
+	at Framework.TestingFramework.methods.RequisitionHome.actionOnRequisition(RequisitionHome.java:261)
+	at Framework.TestingFramework.test.RequisitionTest.Copy_Requisition(RequisitionTest.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.all({By.xpath: //span[@class='md-toast-text ng-binding flex']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'psslass11153-System-Product-Name', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-141-generic', java.version: '1.8.0_161'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:58)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Copy_Requisition -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Framework.TestingFramework.test.RequisitionTest@1e397ed7]" name="tearDown" is-config="true" duration-ms="133" started-at="2018-11-06T15:49:10Z" finished-at="2018-11-06T15:49:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Framework.TestingFramework.test.RMSFlowTest -->
+      </class> <!-- Framework.TestingFramework.test.RequisitionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

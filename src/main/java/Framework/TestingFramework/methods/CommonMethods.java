@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
-
 import javax.mail.Address;
 import javax.mail.BodyPart;
 import javax.mail.Flags;
@@ -347,22 +346,30 @@ public class CommonMethods
 				long diff = date.getTime()-message.getReceivedDate().getTime();//Get The difference between two dates
 				long diffMinutes = diff / (60 * 1000) % 60; //Fetching the difference of minute
 				try {
-						if(message.getSubject().contains(subjectKeyword) &&email.equals(fromEmail) && getTextFromMessage(message).contains(bodySearchText) && diffMinutes<=5)
+						if(message.getSubject().contains(subjectKeyword) && email.equals(fromEmail) && getTextFromMessage(message).contains(bodySearchText) && diffMinutes<=500)
 						{
+							return getTextFromMessage(message);
 							/*System.out.println(getTextFromMessage(message));
 							System.out.println("Found message #" + i + ": ");
-							System.out.println("At "+ i + " :"+ "Subject:"+ subject);
-							System.out.println("From: "+ email +" on : "+message.getReceivedDate());*/
+							System.out.println("At "+ i + " :"+ "Subject:"+ message.getSubject());
+							System.out.println("From: "+ email +" on : "+message.getReceivedDate());
+							System.out.println("=======================================================");
+							
 							if(getTextFromMessage(message).contains(bodySearchText)== true)
 							{
+								System.out.println("Email content is right.");
 								String[] temp = getTextFromMessage(message).split(":");
+								for(int i1=0;i1<temp.length;i1++)
+								{
+									System.out.println("value at position "+i1+" = "+temp[i1]);
+								}
 								String msgText = temp[1].trim();
 								OTP=msgText;
 							}
 							else{
 									OTP=null;
 								}
-							break;
+							break;*/
 						}
 					} 
 					catch (NullPointerException expected) 

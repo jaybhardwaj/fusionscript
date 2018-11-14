@@ -19,6 +19,7 @@ public class RMSFlowHome
 	InterviewCalendarHome Interview;
 	RequisitionHome Req_Home;
 	ReferralHome Ref_Home;
+	CommonMethods CMT;
 	WebDriver driver;
 	JavascriptExecutor jse ;
 	int time = Integer.parseInt(BaseTest.env.get("waitTime"));
@@ -39,6 +40,7 @@ public class RMSFlowHome
 		Interview = new InterviewCalendarHome(driver);
 		Ref_Home = new ReferralHome(driver);
 		Pipe_Home = new PipelineHome(driver);
+		CMT = new CommonMethods(driver);
 	}
 	public boolean PreScreening(String jobTitle, String Candidate, String PreScreeningStatus) throws ClassNotFoundException, InterruptedException, SQLException
 	{
@@ -85,11 +87,6 @@ public class RMSFlowHome
 	
 	public boolean completeInterviewStage(String stage, String action, String type,String PreScreeningStatus) throws ClassNotFoundException, InterruptedException, SQLException, IOException, FindFailed
 	{
-		/*System.out.println("completeInterviewStage is called.");
-		if(Pipe_Home.actionOnPipelineTable("Manendra","IFZGWUQUHM","Offered","sendLink"))
-		{
-			return true;
-		}*/
 		String Jobtitle = null;
 		String Candidate = null;
 		if(type.equalsIgnoreCase("Referral"))
@@ -192,6 +189,46 @@ public class RMSFlowHome
 					}
 		
 		}
+		return false;
+	}
+
+	public boolean test() throws InterruptedException, IOException
+	{
+		String Candidate = ReqCan.get(1);
+		String Jobtitle = ReqCan.get(0);
+		System.out.println("Candidate Name is--------------------->>>>>"+Candidate);
+		System.out.println("Jobtitle  is--------------------->>>>>"+Jobtitle);
+		if(Pipe_Home.actionOnPipelineTable(Candidate,Jobtitle,"Offered","sendLink","Lateral"))
+		{
+			String[] LinkData = GetLinkData();
+			System.out.println("Link is = "+LinkData[1]);
+			System.out.println("password is = "+LinkData[0]);
+			jse.executeScript("window.open();");
+			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+		    driver.get(LinkData[1]);
+		    WaitUtil.sleep(60000);
+			return true;
+		}
+		return false;
+	}
+	
+	public String[] GetLinkData() throws IOException
+	{
+		String[] LinkData = new String[2];
+		String EmailText = CMT.getEmailText("jaybhardwaj2991@gmail.com","polestar@123","First Step Towards An Exciting Journey With Polestar !!!!", "support@polestarllp.com", "Kindly complete your joining process via this link:");
+		String[] SplitedText = EmailText.split(":");
+		String[] temp4 = SplitedText[4].split(" ");
+		LinkData[0] = temp4[1];
+		String[] temp3 = SplitedText[3].split(" ");
+		String linkLastPart = temp3[0];
+		LinkData[1] = SplitedText[1]+":"+SplitedText[2]+":"+linkLastPart;
+		return 	LinkData;
+	}
+
+	public boolean CompleteRMSFlow()
+	{
+		
 		return false;
 	}
 
